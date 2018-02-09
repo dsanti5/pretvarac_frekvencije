@@ -41,6 +41,15 @@
 #define LCDTurnOffCursor 0b00001100
 #define LCDGoHome 0b00000010
 
+
+void initLcd(){
+	InitializePortsForLCD();
+	LCDSendAnInstruction(LCDInstructions_Set8bitMode_2LineDisplay);
+	LCDSendAnInstruction(LCDInstructions_DisplayOn_CursorOn_CursorBlinkOff);
+	LCDSendAnInstruction(LCDInstructions_IncrementPositionByOne);
+	LCDSendAnInstruction(LCDInstructions_ClearDisplay);
+}
+
 void notExactTimeDelay(int timeDelay)
 {
 	volatile int i;

@@ -44,10 +44,10 @@ int main(void){
 	//sklopka
 	GPIOA->MODER &= ~GPIO_MODER_MODER15;
 	GPIOA->PUPDR &= ~GPIO_PUPDR_PUPDR15;
-	//A i B encodera
+	//A encodera
 	GPIOA->MODER &= ~GPIO_MODER_MODER6;
 	GPIOA->PUPDR &= ~GPIO_PUPDR_PUPDR6;
-
+	//B encodera
 	GPIOA->MODER &= ~GPIO_MODER_MODER7;
 	GPIOA->PUPDR &= ~GPIO_PUPDR_PUPDR7;
 
