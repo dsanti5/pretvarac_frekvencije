@@ -20,19 +20,26 @@
 #define LCDD6Port GPIOC
 #define LCDD7Pin 8
 #define LCDD7Port GPIOC
+
 #define LCDEnablePin 5
 #define LCDEnablePort GPIOC
+
 #define LCDReadWritePin 13
 #define LCDReadWritePort GPIOB
+
 #define LCDRegisterSelectPin 6
 #define LCDRegisterSelectPort GPIOC
+
 #define TimeDelayBeforeEnable 400
 #define TimeDelayBeforeDisable 800
+
 #define LCDInstructions_GoToNextLine 0b11000000
 #define LCDInstructions_Set8bitMode_2LineDisplay 0b00111000
 #define LCDInstructions_DisplayOn_CursorOn_CursorBlinkOff 0b00001110
 #define LCDInstructions_IncrementPositionByOne 0b00000110
 #define LCDInstructions_ClearDisplay 0b00000001
+#define LCDTurnOffCursor 0b00001100
+#define LCDGoHome 0b00000010
 
 void notExactTimeDelay(int timeDelay)
 {
